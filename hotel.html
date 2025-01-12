@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <link rel="stylesheet" href="hotel.css">
+</head>
+<body>
+    <header>
+        <h1>Hotel Booking Website</h1>
+    </header>
+    
+    <main>
+        <h2>Available Rooms</h2>
+        <div class="room" id="room1">
+            <h3>Deluxe Room</h3>
+            <p>Price: $200 per night</p>
+            <button onclick="openBookingForm('Deluxe Room', 200)">Book Now</button>
+        </div>
+        <div class="room" id="room2">
+            <h3>Standard Room</h3>
+            <p>Price: $100 per night</p>
+            <button onclick="openBookingForm('Standard Room', 100)">Book Now</button>
+        </div>
+    </main>
+    
+    <div id="bookingForm" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBookingForm()">&times;</span>
+            <h2>Booking Form</h2>
+            <form id="form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="roomType">Room Type:</label>
+                <input type="text" id="roomType" readonly>
+                <label for="price">Price:</label>
+                <input type="text" id="price" readonly>
+                <input type="submit" value="Book Now">
+            </form>
+        </div>
+    </div>
+
+    <script src="hotel.js"></script>
+</body>
+</html>
